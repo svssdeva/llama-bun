@@ -1,7 +1,4 @@
 import { createSignal, createEffect } from 'solid-js'
-import { Suspense } from "solid-js";
-import { Router } from "@solidjs/router";
-import { FileRoutes } from "@solidjs/start/router";
 import './App.css'
 
 function App() {
@@ -17,9 +14,9 @@ function App() {
         <button class='my-2 text-red-500' onClick={() => setCount(count() + 1)}>Increment Count</button>
         <p>{count()} : {doubleCount()}</p>
       </main>
-      <Router root={props => <Suspense>{props.children}</Suspense>}>
-        <FileRoutes />
-      </Router>
+      <footer>
+        <strong><a href="/chat">Go to chat</a></strong>
+      </footer>
     </>
   )
 }
